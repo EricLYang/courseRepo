@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/sophus_demo.dir/src/mainSophus.cpp.o  -o sophus_demo -rdynamic /home/ericyanng/ROS_WORKSPACE/slamCourse/2_class/sophus_example/Sophus/build/libSophus.so -Wl,-rpath,/home/ericyanng/ROS_WORKSPACE/slamCourse/2_class/sophus_example/Sophus/build 
