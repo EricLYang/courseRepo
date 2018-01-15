@@ -4,11 +4,11 @@
 
 1. 给除了一些参考论文,这些都是很出色的工作,详细看一下:
 
->- [Reference]()
+>- [Reference](https://github.com/EricLYang/courseRepo/tree/master/3_class/referencePaper)
 
-2.  分清楚Indirect Approach 和 Direct Approach区别
+2.  分清楚Indirect Approach 和 Direct Approach区别,第二章
 
-> - [PDF]()
+> - [PDF](https://github.com/EricLYang/courseRepo/blob/master/1_Introduction/referencePaper/kinematics.pdf)
 
 
 
@@ -18,7 +18,7 @@
 源代码链接[link](https://www.mathworks.com/matlabcentral/fileexchange/43218-visual-inertial-odometry?s_tid=gn_loc_drop)
 
 1. 论文,请参见链接
-> - [PDF]()
+> - [PDF](https://github.com/EricLYang/courseRepo/blob/master/3_class/referencePaper/icra2014.pdf)
 
 2. 这个里面用到的各项技巧都是其他论文里面或多或少涉及,特别是Sliding Window这个概念
 
@@ -26,4 +26,4 @@
 
 ### MONO-SLAM的实例
 
-请见[mono-slam文件夹]()
+请见[mono-slam文件夹](https://github.com/EricLYang/courseRepo/tree/master/3_class/mono-slam)
