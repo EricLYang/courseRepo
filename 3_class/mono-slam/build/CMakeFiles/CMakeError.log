@@ -1,0 +1,53 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/ericyanng/ROS_WORKSPACE/slamCourse/3_class/mono-slam/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1844951019/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1844951019.dir/build.make CMakeFiles/cmTryCompileExec1844951019.dir/build
+make[1]: Entering directory `/home/ericyanng/ROS_WORKSPACE/slamCourse/3_class/mono-slam/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ericyanng/ROS_WORKSPACE/slamCourse/3_class/mono-slam/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1844951019.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1844951019.dir/CheckSymbolExists.c.o   -c /home/ericyanng/ROS_WORKSPACE/slamCourse/3_class/mono-slam/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec1844951019
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1844951019.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1844951019.dir/CheckSymbolExists.c.o  -o cmTryCompileExec1844951019 -rdynamic 
+CMakeFiles/cmTryCompileExec1844951019.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[1]: Leaving directory `/home/ericyanng/ROS_WORKSPACE/slamCourse/3_class/mono-slam/build/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec1844951019] Error 1
+make: *** [cmTryCompileExec1844951019/fast] Error 2
+
+File /home/ericyanng/ROS_WORKSPACE/slamCourse/3_class/mono-slam/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/ericyanng/ROS_WORKSPACE/slamCourse/3_class/mono-slam/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec4106228172/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4106228172.dir/build.make CMakeFiles/cmTryCompileExec4106228172.dir/build
+make[1]: Entering directory `/home/ericyanng/ROS_WORKSPACE/slamCourse/3_class/mono-slam/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ericyanng/ROS_WORKSPACE/slamCourse/3_class/mono-slam/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4106228172.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec4106228172.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec4106228172
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4106228172.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec4106228172.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4106228172 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: Leaving directory `/home/ericyanng/ROS_WORKSPACE/slamCourse/3_class/mono-slam/build/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec4106228172] Error 1
+make: *** [cmTryCompileExec4106228172/fast] Error 2
+
+

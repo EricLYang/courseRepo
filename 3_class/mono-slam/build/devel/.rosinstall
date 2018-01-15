@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/ericyanng/ROS_WORKSPACE/slamCourse/3_class/mono-slam/build/devel/setup.sh

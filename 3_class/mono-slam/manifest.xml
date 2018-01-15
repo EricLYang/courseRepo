@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package>
+  <name>mono-slam</name>
+  <version>0.0.1</version>
+  <description>Mono-SLAM implementation for ROS</description>
+
+  <license>BSDv2.0</license>
+  <depend package="roscpp"/>
+  <depend package="tf"/>
+  <depend package="sensor_msgs"/>
+  <depend package="image_transport"/>
+  <depend package="cv_bridge"/>
+</package>

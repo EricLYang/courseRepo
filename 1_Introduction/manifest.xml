@@ -4,7 +4,7 @@
      Course1_project
 
   </description>
-  <author>Raul Mur-Artal</author>
+  <author>Liang Yang</author>
   <license>GPLv3</license>
   <depend package="roscpp"/>
   <depend package="tf"/>
