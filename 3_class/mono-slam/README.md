@@ -23,5 +23,8 @@ Please revise the run.sh file, and change the part of your camera config file an
 
 > - bash run.sh
 
+我提供的一个数据集,请见百度网盘链接(微信群里),使用的话:
+
+> - rosbag play test.bag
 
 
