@@ -21,7 +21,7 @@
 #include <pcl/PCLPointCloud2.h>
 #include <boost/thread/thread.hpp>
 
-typedef pcl::PointXYZ PointT;
+typedef pcl::PointXYZRGBA PointT;
 typedef pcl::PointCloud<PointT> PointCloud; 
 
 using namespace std;
@@ -57,7 +57,11 @@ void callback(const ImageConstPtr& image_color_msg,
         boost::mutex::scoped_lock(mutex_);
 
 	cv::Mat image_color = cv_bridge::toCvCopy(image_color_msg)->image;
-	cv::Mat image_depth = cv_bridge::toCvCopy(image_depth_msg)->image;
+        
+	//cv::Mat image_depth = cv_bridge::toCvCopy(image_depth_msg)->image;
+        cv::Mat image_depth = cv_bridge::toCvShare(image_depth_msg)->image;
+
+        image_depth.convertTo(image_depth, CV_32F, 1.0);
 
 	cvtColor(image_color,image_color, CV_RGB2BGR);
 
@@ -80,12 +84,16 @@ void callback(const ImageConstPtr& image_color_msg,
 	PointT pt;
 	for(int y=0;y<image_depth.rows;y++) {
 		for(int x=0;x<image_depth.cols;x++) {
-			uint16_t depth = image_depth.at<uint16_t>(cv::Point(x,y))*0.001;
-
+			float depth = image_depth.at<float>(cv::Point(x,y));
+                         cv::Vec3b color = image_color.at<cv::Vec3b>(cv::Point(x,y));
 			if(depth>0 && depth<10) {
 				pt.x = (x - cx) * depth / fx;
 				pt.y = (y - cy) * depth / fy;
 				pt.z = depth;
+                                
+                                pt.r = (color[2]);
+                                pt.g = (color[1]);
+                                pt.b = (color[0]);
 				//cout << pt.x<<" "<<pt.y<<" "<<pt.z<<endl;
 				pointcloud_msg->points.push_back(pt);
 			}
@@ -94,10 +102,9 @@ void callback(const ImageConstPtr& image_color_msg,
         
         //viewer = simpleVis(pointcloud_msg);
         ::viewer.showCloud(pointcloud_msg);
-	//pointcloud_msg->height = 1;
-	//pointcloud_msg->width = pointcloud_msg->points.size();
-	//pointcloud_pub.publish (pointcloud_msg);
-        sprintf
+	pointcloud_msg->height = 1;
+	pointcloud_msg->width = pointcloud_msg->points.size();
+	pointcloud_pub.publish (pointcloud_msg);
 	cv::imshow("color", image_depth);
         cv::imwrite("/images/1.jpg", image_depth);
 	cv::waitKey(3);
