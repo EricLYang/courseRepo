@@ -1,0 +1,7 @@
+<launch>	
+ 	<node pkg="ORB_SLAM2" type="RGBD" name="RGBD"  args="/home/ericyanng/ROS_WORKSPACE/ORB_SLAM2/Vocabulary/ORBvoc.txt /home/ericyanng/ROS_WORKSPACE/ORB_SLAM2/Setting/SETTING.yaml" cwd="node" output="screen">
+         <remap from="/camera/rgb/image_raw" to="/camera/rgb/image_raw" />
+         <remap from="/camera/depth_registered/image_raw" to="/camera/depth/image_raw" />
+   </node>
+
+</launch>
