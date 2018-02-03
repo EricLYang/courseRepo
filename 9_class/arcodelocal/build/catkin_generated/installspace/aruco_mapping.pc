@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: aruco_mapping
+Description: Description of aruco_mapping
+Version: 1.0.4
+Cflags: -I/usr/local/include
+Libs: -L/usr/local/lib 
+Requires: 

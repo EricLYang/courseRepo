@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/ericyanng/ROS_WORKSPACE/arcodelocal/build/devel/setup.sh

@@ -1,0 +1,8 @@
+prefix=/home/ericyanng/ROS_WORKSPACE/arcodelocal/build/devel
+
+Name: aruco_mapping
+Description: Description of aruco_mapping
+Version: 1.0.4
+Cflags: -I/home/ericyanng/ROS_WORKSPACE/arcodelocal/build/devel/include -I/home/ericyanng/ROS_WORKSPACE/arcodelocal/include
+Libs: -L/home/ericyanng/ROS_WORKSPACE/arcodelocal/build/devel/lib 
+Requires: 

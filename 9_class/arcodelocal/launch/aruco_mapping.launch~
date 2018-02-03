@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<launch> 
+
+  <!-- RVIZ 
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find aruco_mapping)/launch/aruco_config.rviz" />
+-->
+    
+  <!-- ArUco mapping --> geniusF100 pointGrey
+  <node pkg="aruco_mapping" type="aruco_mapping" name="aruco_mapping" output="screen">
+    <remap from="/image_raw" to="/camera/image_raw"/>
+
+    <param name="calibration_file" type="string" value="/$(find aruco_mapping)/data/pointGrey.ini" /> 
+    <param name="num_of_markers" type="int" value="10" />
+    <param name="marker_size" type="double" value="0.450"/>
+    <param name="space_type" type="string" value="plane" />
+    <param name="roi_allowed" type="bool" value="false" /> -->
+    <param name="roi_x" type="int" value="0" /> -->
+    <param name="roi_y" type="int" value="0" /> -->
+    <param name="roi_w" type="int" value="1920" /> -->
+    <param name="roi_h" type="int" value="1080" /> --> 
+
+  </node>  
+</launch>
