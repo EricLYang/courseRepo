@@ -1,18 +1,18 @@
 ### CourseRepo
-This folder contains the files for SLAM Robotics & Autonomous Driving course, this course mostly based on: Ubuntu (I use [14.04](http://releases.ubuntu.com/14.04/)) with [ROS Indigo](http://wiki.ros.org/indigo).
+This folder contains the files for SLAM Robotics & Autonomous Driving course, this course is mostly based on: Ubuntu (I use [14.04](http://releases.ubuntu.com/14.04/)) with [ROS Indigo](http://wiki.ros.org/indigo).
 
 1. Install ROS 安装ROS版本可以根据个人情况而定,没有特定要求
 
-Before start, please follow the instruction to install ROS:
+Before starting, please follow the given instruction to install ROS:
 - For indigo: [Link](http://wiki.ros.org/indigo/Installation), if you use ubuntu, follow this [link](http://wiki.ros.org/indigo/Installation/Ubuntu)
 
 - For other distribution of ROS, please search google with: ROS + [dirstribution](http://wiki.ros.org/Distributions) + install
 
 2. Install Opencv
 
-Please follow this [intruction](http://www.samontab.com/web/2014/06/installing-opencv-2-4-9-in-ubuntu-14-04-lts/)
+Please follow this [intsruction](http://www.samontab.com/web/2014/06/installing-opencv-2-4-9-in-ubuntu-14-04-lts/)
 
-If you need a disfferent distribution, execute
+If you need a different distribution, execute
 
 > - git checkout distribution
 
@@ -49,13 +49,13 @@ Open a new terminal, try:
 > - [链接](https://github.com/Akagi201/learning-cmake)
 
 ### Add SSH key to your github
-Follow this intruction, 
+Follow this instruction, 
 > https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
 
 If not working, go to your folder with use interface or go to the /path/of/the/folder in terminal execute:
 > ll
 
-Then, go to .git/config, change
+Then, direct to .git/config, change
 > url = http://github.com/path/to/repository
 to
 > url = ssh://git@github.com/path/to/repository
